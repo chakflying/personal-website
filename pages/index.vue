@@ -304,7 +304,8 @@ export default {
 }
 
 .social {
-  @apply text-indigo-200 text-2xl;
+  @apply text-indigo-200;
+  font-size: 30px;
 }
 
 .social:hover {
