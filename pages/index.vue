@@ -99,17 +99,17 @@
       </div>
       <div class="mt-4 flex w-auto justify-center">
         <a href="https://gitlab.com/chakflying/" class="social"
-          ><fa class="mx-4" :icon="['fab', 'gitlab']"
-        /></a>
+          ><fa class="mx-4" :icon="['fab', 'gitlab']"></fa
+        ></a>
         <a href="https://github.ccs.neu.edu/ckfy/" class="social"
-          ><fa class="mx-4" :icon="['fab', 'github']"
-        /></a>
+          ><fa class="mx-4" :icon="['fab', 'github']"></fa
+        ></a>
         <a href="https://www.linkedin.com/in/nelsoncch/" class="social"
-          ><fa class="mx-4" :icon="['fab', 'linkedin']"
-        /></a>
+          ><fa class="mx-4" :icon="['fab', 'linkedin']"></fa
+        ></a>
         <a href="mailto:chan.chak@northeastern.edu" class="social"
-          ><fa class="mx-4" :icon="['fas', 'inbox']"
-        /></a>
+          ><fa class="mx-4" :icon="['fas', 'inbox']"></fa
+        ></a>
       </div>
       <div class="mt-4 mb-5 flex w-auto justify-center">
         <ul class="flex">
@@ -304,7 +304,7 @@ export default {
 }
 
 .social {
-  @apply text-indigo-200 text-base;
+  @apply text-indigo-200 text-2xl;
 }
 
 .social:hover {
