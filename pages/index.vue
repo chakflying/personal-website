@@ -99,16 +99,16 @@
       </div>
       <div class="mt-4 flex w-auto justify-center">
         <a href="https://gitlab.com/chakflying/" class="social"
-          ><fa class="mx-4" :icon="['fab', 'gitlab']" size="lg"></fa
+          ><fa class="mx-4" :icon="['fab', 'gitlab']"></fa
         ></a>
         <a href="https://github.ccs.neu.edu/ckfy/" class="social"
-          ><fa class="mx-4" :icon="['fab', 'github']" size="lg"></fa
+          ><fa class="mx-4" :icon="['fab', 'github']"></fa
         ></a>
         <a href="https://www.linkedin.com/in/nelsoncch/" class="social"
-          ><fa class="mx-4" :icon="['fab', 'linkedin']" size="lg"></fa
+          ><fa class="mx-4" :icon="['fab', 'linkedin']"></fa
         ></a>
         <a href="mailto:chan.chak@northeastern.edu" class="social"
-          ><fa class="mx-4" :icon="['fas', 'inbox']" size="lg"></fa
+          ><fa class="mx-4" :icon="['fas', 'inbox']"></fa
         ></a>
       </div>
       <div class="mt-4 mb-5 flex w-auto justify-center">
@@ -313,6 +313,10 @@ export default {
 
 .social:active {
   @apply text-indigo-500;
+}
+
+.social > svg {
+  height: 35px;
 }
 
 body {
