@@ -1,13 +1,11 @@
 <template>
-  <div>
-    <nuxt />
-  </div>
+  <nuxt />
 </template>
 
-<style>
+<style lang="postcss">
 html {
-  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-    Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
   -ms-text-size-adjust: 100%;
@@ -48,8 +46,29 @@ html {
   margin-left: 15px;
 }
 
+a {
+  @apply underline;
+}
+
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
+}
+
+@font-face {
+  font-family: Nunito;
+  src: url(/Nunito-Regular.ttf);
+}
+
+@font-face {
+  font-family: Nunito;
+  src: url(/Nunito-Bold.ttf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: Nunito;
+  src: url(/Nunito-Light.ttf);
+  font-weight: lighter;
 }
 </style>
