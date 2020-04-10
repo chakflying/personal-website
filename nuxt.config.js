@@ -23,11 +23,11 @@ export default {
   /*
    ** Global CSS
    */
-  css: [],
+  css: ['@fortawesome/fontawesome-svg-core/styles.css'],
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [{ src: '~/plugins/vue-masonry', ssr: false }],
+  plugins: [{ src: '~/plugins/vue-masonry', ssr: false }, '~/plugins/fontawesome.js'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -51,19 +51,6 @@ export default {
    */
   axios: {},
 
-  fontawesome: {
-    component: 'fa',
-    imports: [
-      {
-        set: '@fortawesome/free-solid-svg-icons',
-        icons: ['fas']
-      },
-      {
-        set: '@fortawesome/free-brands-svg-icons',
-        icons: ['fab']
-      }
-    ]
-  },
   /*
    ** Build configuration
    */
