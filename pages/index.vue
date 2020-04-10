@@ -97,7 +97,7 @@
       <div class="mt-2 subtitle">
         I like design, tech and exploring new things.
       </div>
-      <div class="mt-4 flex w-auto justify-center text-2xl">
+      <div class="mt-4 flex w-auto justify-center">
         <a href="https://gitlab.com/chakflying/" class="social"
           ><fa class="mx-4" :icon="['fab', 'gitlab']"
         /></a>
@@ -304,7 +304,7 @@ export default {
 }
 
 .social {
-  @apply text-indigo-200;
+  @apply text-indigo-200 text-base;
 }
 
 .social:hover {
