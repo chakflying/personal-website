@@ -59,6 +59,7 @@ export default {
      ** You can extend webpack config here
      */
     optimization: { minimize: false },
+    extractCSS: true,
     analyse: true,
     extend(config, ctx) {}
   }
