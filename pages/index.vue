@@ -97,7 +97,7 @@
       <div class="mt-2 subtitle">
         I like design, tech and exploring new things.
       </div>
-      <div class="mt-4 flex w-auto justify-center">
+      <div class="mt-4 flex w-auto justify-center text-2xl">
         <a href="https://gitlab.com/chakflying/" class="social"
           ><fa class="mx-4" :icon="['fab', 'gitlab']"></fa
         ></a>
@@ -111,6 +111,7 @@
           ><fa class="mx-4" :icon="['fas', 'inbox']"></fa
         ></a>
       </div>
+      <hr class="divider" />
       <div class="mt-4 mb-5 flex w-auto justify-center">
         <ul class="flex">
           <li class="mx-10">
@@ -186,7 +187,7 @@ export default {
 
 <style lang="postcss">
 .mainheader {
-  @apply justify-center items-center text-center pt-12 mx-auto;
+  @apply grid justify-center items-center text-center pt-12 mx-auto;
 }
 
 #headericon {
@@ -289,6 +290,11 @@ export default {
   animation: sendtoback 1ms 2.5s forwards;
 }
 
+.divider {
+  border-top: 2px solid;
+  @apply border-gray-400 mt-4;
+}
+
 .title {
   font-family: Nunito;
   @apply text-2xl font-light w-full;
@@ -313,10 +319,6 @@ export default {
 
 .social:active {
   @apply text-indigo-500;
-}
-
-.social > svg {
-  height: 35px;
 }
 
 body {

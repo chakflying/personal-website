@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto w-4/5 lg:w-1/2 p-2 mt-8">
+  <div class="mx-auto w-4/5 lg:w-1/2 p-2 mt-6">
     <ul class="biolist lg:ml-10">
       <li>
         I live in Hong Kong, the city I will always love. &nbsp;<img

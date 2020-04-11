@@ -6,7 +6,12 @@
       item-selector=".item"
       class="masonry-container w-full lg:w-4/5"
     >
-      <div v-for="(item, index) in photos" :key="index" v-masonry-tile class="item w-full lg:w-1/3">
+      <div
+        v-for="(item, index) in photos"
+        :key="index"
+        v-masonry-tile
+        class="item w-full lg:w-1/3 p-4 lg:p-1"
+      >
         <img class="myphoto" :src="item" :alt="'Photo' + index" />
       </div>
     </div>
@@ -44,7 +49,6 @@ export default {
   @apply flex justify-center items-center mx-auto;
 }
 .item {
-  @apply p-1;
 }
 
 .myphoto {

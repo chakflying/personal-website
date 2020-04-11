@@ -10,7 +10,7 @@
         v-for="(item, index) in doodles"
         :key="index"
         v-masonry-tile
-        class="item w-full lg:w-1/3 lg:p-1"
+        class="item w-full lg:w-1/3 p-4 lg:p-1"
       >
         <img class="mydoodle" :src="item" :alt="'Doodle' + index" />
       </div>
@@ -45,7 +45,6 @@ export default {
   @apply flex justify-center items-center mx-auto;
 }
 .item {
-  @apply p-4;
 }
 
 .mydoodle {
