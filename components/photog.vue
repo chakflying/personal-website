@@ -27,7 +27,6 @@ export default {
   data() {
     return {
       photos: [
-        '/photog/_DSC0033_1.webp',
         '/photog/_DSC0044.webp',
         '/photog/_DSC0046.webp',
         '/photog/_DSC0033.webp',
