@@ -51,6 +51,10 @@ export default {
    */
   axios: {},
 
+  purgeCSS: {
+    whitelistPatterns: [/svg.*/, /fa.*/]
+  },
+
   /*
    ** Build configuration
    */
@@ -58,7 +62,7 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    optimization: { minimize: false },
+    // optimization: { minimize: false },
     extractCSS: true,
     analyse: true,
     extend(config, ctx) {}
