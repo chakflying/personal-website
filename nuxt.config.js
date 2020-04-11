@@ -58,6 +58,8 @@ export default {
     /*
      ** You can extend webpack config here
      */
+    analyse: true,
+    extractCSS: true,
     extend(config, ctx) {}
   }
 }
