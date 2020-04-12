@@ -2,6 +2,8 @@ stages:
     - build
 
 build_project:
+    tags:
+        - prod
     stage: build
     script:
         - docker build -t personal-web-builder:latest .
