@@ -10,4 +10,4 @@ build_project:
         - docker stop pw-builder
         - docker rm pw-builder
         - docker run --name pw-builder -p 3000:3000/tcp -d personal-web-builder:latest
-        - docker image prune
+        - docker image prune -f
