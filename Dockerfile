@@ -1,10 +1,11 @@
 FROM node:lts-alpine
 
 WORKDIR /usr/src/app
+ENV HOST 0.0.0.0
+EXPOSE 3000
 
 COPY . /usr/src/app
-RUN apk update && apk add curl git yarn
-RUN yarn install
-RUN yarn run dev
-
-EXPOSE 3000
+RUN apk update && apk add yarn
+RUN yarn install --pure-lockfile
+RUN yarn run build
+CMD ["yarn", "run", "start"]
