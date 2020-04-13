@@ -5,7 +5,10 @@ build_project:
     tags:
         - prod
     stage: build
+    before_script:
+        - echo "Testing before script"
     script:
+        - echo "Testing"
         - docker build -t personal-web-builder:latest .
         - docker stop pw-builder
         - docker rm pw-builder
