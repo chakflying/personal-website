@@ -1,19 +1,19 @@
 variables:
-    GIT_CLONE_PATH: $CI_BUILDS_DIR/personal-website
+  GIT_CLONE_PATH: $CI_BUILDS_DIR/personal-website
 
 stages:
-    - build
+  - build
 
 build_project:
-    tags:
-        - prod
-    stage: build
-    before_script:
-        - echo "Testing before script"
-    script:
-        - echo "Testing"
-        - docker build -t personal-web-builder:latest .
-        - docker stop pw-builder
-        - docker rm pw-builder
-        - docker run --name pw-builder -p 3000:3000/tcp -d personal-web-builder:latest
-        - docker image prune -f
+  tags:
+    - prod
+  stage: build
+  before_script:
+    - echo "Testing before script"
+  script:
+    - echo "Testing"
+    - docker build -t personal-web-builder:latest .
+    - docker stop pw-builder
+    - docker rm pw-builder
+    - docker run --name pw-builder -p 3000:3000/tcp -d --restart always personal-web-builder:latest
+    - docker image prune -f
