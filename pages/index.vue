@@ -50,7 +50,7 @@
               <animate
                 attributeName="stop-color"
                 values="#1F1F1F; white"
-                begin="0.5s"
+                begin="0s"
                 dur="1s"
                 fill="freeze"
               />
@@ -59,7 +59,7 @@
               <animate
                 attributeName="stop-color"
                 values="#1F1F1F; white"
-                begin="0.5s"
+                begin="0s"
                 dur="1s"
                 fill="freeze"
               />
