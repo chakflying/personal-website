@@ -12,7 +12,10 @@
         v-masonry-tile
         class="item w-full lg:w-1/3 p-4 lg:p-1"
       >
-        <img class="mydoodle" :src="item" :alt="'Doodle' + index" />
+        <picture>
+          <source :srcset="item + '.webp'" type="image/webp" />
+          <img class="mydoodle" :src="item + '.jpeg'" :alt="'Doodle ' + index + 1" />
+        </picture>
       </div>
     </div>
   </client-only>
@@ -27,13 +30,11 @@ export default {
   data() {
     return {
       doodles: [
-        '/doodle/brainbird.webp',
-        '/doodle/Day7_louvre.webp',
-        '/doodle/Day12_sometroop.webp',
-        '/doodle/outerworlds_1.webp',
-        '/doodle/Scene1.webp',
-        '/doodle/Scene3_1.webp',
-        '/doodle/Scene3_2.webp'
+        '/doodle/louvre',
+        '/doodle/sometroop',
+        '/doodle/brainbird',
+        '/doodle/outerworlds1',
+        '/doodle/Scene3_2'
       ]
     }
   }

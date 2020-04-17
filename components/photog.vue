@@ -12,7 +12,10 @@
         v-masonry-tile
         class="item w-full lg:w-1/3 p-4 lg:p-1"
       >
-        <img class="myphoto" :src="item" :alt="'Photo' + index" />
+        <picture>
+          <source :srcset="item + '.webp'" type="image/webp" />
+          <img class="myphoto" :src="item + '.jpeg'" :alt="'Photo ' + index + 1" />
+        </picture>
       </div>
     </div>
   </client-only>
@@ -27,17 +30,17 @@ export default {
   data() {
     return {
       photos: [
-        '/photog/_DSC0044.webp',
-        '/photog/_DSC0052.webp',
-        '/photog/_DSC0033.webp',
-        '/photog/_DSC0173.webp',
-        '/photog/_DSC9292.webp',
-        '/photog/_DSC9597.webp',
-        '/photog/_DSC9995.webp',
-        '/photog/_DSC0999.webp',
-        '/photog/_DSC0614.webp',
-        '/photog/_DSC0084.webp',
-        '/photog/_DSC9213.webp'
+        '/photog/_DSC0033',
+        '/photog/_DSC0052',
+        '/photog/_DSC1079',
+        '/photog/_DSC0173',
+        '/photog/_DSC9292',
+        '/photog/_DSC9597',
+        '/photog/_DSC0425',
+        '/photog/_DSC0999',
+        '/photog/_DSC0614',
+        '/photog/_DSC0084',
+        '/photog/_DSC9213'
       ]
     }
   }

@@ -92,12 +92,15 @@
     <div class="mainheader">
       <div class="title">Hi, I'm Nelson!</div>
       <div class="flex justify-center mt-2">
-        <img id="headericon" src="/webicon1.webp" alt="my icon" />
+        <picture>
+          <source srcset="/webicon1.webp" type="image/webp" />
+          <img id="headericon" src="/webicon1.png" alt="my icon" />
+        </picture>
       </div>
       <div class="mt-2 subtitle">
         I like design, tech and exploring new things.
       </div>
-      <div class="mt-4 flex w-auto justify-center text-2xl">
+      <div class="mt-3 flex w-auto justify-center text-2xl">
         <a href="https://gitlab.com/chakflying/" class="social"
           ><fa class="mx-4" :icon="['fab', 'gitlab']"></fa
         ></a>
