@@ -46,6 +46,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
         .to('#right', { duration: 2.15, x: -1350, ease: 'power2.out' }, 'open')
         .to('#left', { duration: 2.15, x: 1350, ease: 'power2.out' }, 'open')
         .to('.bg-noise', { duration: 0.01, zIndex: -1 }, 'open')
+        .to('#bgsvg', { duration: 0.01, zIndex: -100 }, 'open+=1.5')
     })
   }
 })

@@ -88,7 +88,7 @@
                 'nav-link': currentComponent != 'bio'
               }"
               @click="swapComponent('bio')"
-              >Bio</a
+              ><fa class="navcon" :icon="['far', 'file-alt']"></fa>Bio</a
             >
           </li>
           <li class="mx-6 md:mx-10">
@@ -99,7 +99,7 @@
                 'nav-link': currentComponent != 'doodle'
               }"
               @click="swapComponent('doodle')"
-              >Doodles</a
+              ><fa class="navcon" :icon="['fas', 'pen']"></fa>Doodles</a
             >
           </li>
           <li class="mx-6 md:mx-10">
@@ -110,7 +110,7 @@
                 'nav-link': currentComponent != 'photog'
               }"
               @click="swapComponent('photog')"
-              >Photography</a
+              ><fa class="navcon" :icon="['fas', 'camera']"></fa>Photography</a
             >
           </li>
         </ul>
@@ -177,6 +177,12 @@ export default {
   height: 150px;
 }
 
+.navcon {
+  @apply mr-1;
+  padding-bottom: 2px;
+  font-size: 0.9rem;
+}
+
 .nav-link {
   font-family: Nunito;
   @apply text-gray-400 font-bold;
@@ -210,7 +216,6 @@ export default {
   top: -1px;
   left: 0;
   overflow: hidden;
-  animation: sendtoback 1ms 2.5s forwards;
 }
 
 .bg-noise {
@@ -312,11 +317,5 @@ body {
 
 .footer {
   @apply grid justify-center items-center text-center pt-12 mx-auto;
-}
-
-@keyframes sendtoback {
-  to {
-    z-index: -100;
-  }
 }
 </style>

@@ -1,9 +1,10 @@
 <template>
   <client-only>
     <div
-      v-masonry
+      v-masonry="doodlema"
       transition-duration="1s"
       item-selector=".item"
+      stagger="0.1s"
       class="masonry-container w-full lg:w-4/5"
     >
       <div
@@ -40,7 +41,7 @@ export default {
   },
   mounted() {
     if (typeof this.$redrawVueMasonry === 'function') {
-      this.$redrawVueMasonry()
+      this.$redrawVueMasonry('doodlema')
     }
   }
 }

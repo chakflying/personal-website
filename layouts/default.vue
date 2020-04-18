@@ -46,10 +46,6 @@ html {
   margin-left: 15px;
 }
 
-a {
-  @apply underline;
-}
-
 .button--grey:hover {
   color: #fff;
   background-color: #35495e;
