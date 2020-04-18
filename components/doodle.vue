@@ -37,6 +37,11 @@ export default {
         '/doodle/Scene3_2'
       ]
     }
+  },
+  mounted() {
+    if (typeof this.$redrawVueMasonry === 'function') {
+      this.$redrawVueMasonry()
+    }
   }
 }
 </script>
@@ -45,18 +50,23 @@ export default {
 .masonry-container {
   @apply flex justify-center items-center mx-auto;
 }
+
 .item {
+  z-index: 1;
+  min-height: 300px;
+}
+
+.item:hover {
+  z-index: 999;
+  @apply shadow-2xl;
 }
 
 .mydoodle {
   width: 100%;
-  @apply shadow-2xl;
 }
 
 .mydoodle:hover {
-  -webkit-transform: scale(1.15);
   transform: scale(1.15);
-  z-index: 999;
 }
 
 img {

@@ -36,6 +36,8 @@
 <style lang="postcss" scoped>
 .biolist {
   @apply text-gray-700 list-disc;
+  text-align: justify;
+  text-justify: inter-word;
 }
 .biolist > li {
   @apply mb-6;

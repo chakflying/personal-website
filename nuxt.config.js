@@ -27,7 +27,11 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [{ src: '~/plugins/vue-masonry', ssr: false }, '~/plugins/fontawesome.js'],
+  plugins: [
+    { src: '~/plugins/vue-masonry', ssr: false },
+    '~/plugins/fontawesome.js',
+    { src: '~/plugins/gsap.js', ssr: false }
+  ],
   /*
    ** Nuxt.js dev-modules
    */
@@ -65,6 +69,7 @@ export default {
     // optimization: { minimize: false },
     extractCSS: true,
     analyse: true,
+    transpile: ['gsap'],
     extend(config, ctx) {}
   }
 }
