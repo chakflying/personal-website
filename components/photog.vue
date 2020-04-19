@@ -60,7 +60,7 @@ export default {
 
 .item {
   z-index: 1;
-  min-height: 300px;
+  min-height: 100px;
 }
 
 .item:hover {
