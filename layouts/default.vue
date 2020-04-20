@@ -53,18 +53,21 @@ html {
 
 @font-face {
   font-family: Nunito;
-  src: url(/Nunito-Regular.ttf);
+  src: url(/Nunito-Regular.woff2) format('woff2'), url(/Nunito-Regular.ttf) format('truetype');
+  font-display: swap;
 }
 
 @font-face {
   font-family: Nunito;
-  src: url(/Nunito-Bold.ttf);
+  src: url(/Nunito-Bold.woff2) format('woff2'), url(/Nunito-Bold.ttf) format('truetype');
   font-weight: bold;
+  font-display: swap;
 }
 
 @font-face {
   font-family: Nunito;
-  src: url(/Nunito-Light.ttf);
+  src: url(/Nunito-Light.woff2) format('woff2'), url(/Nunito-Light.ttf) format('truetype');
   font-weight: lighter;
+  font-display: swap;
 }
 </style>

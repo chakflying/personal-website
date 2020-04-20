@@ -14,7 +14,11 @@ export default {
         content: process.env.npm_package_description || ''
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'preload', as: 'font', href: '/Nunito-Bold.woff2', crossorigin: 'anonymous' },
+      { rel: 'preload', as: 'font', href: '/Nunito-Light.woff2', crossorigin: 'anonymous' }
+    ]
   },
   /*
    ** Customize the progress-bar color
