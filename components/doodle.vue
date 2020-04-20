@@ -35,7 +35,7 @@ export default {
         '/doodle/sometroop',
         '/doodle/brainbird',
         '/doodle/outerworlds1',
-        '/doodle/Scene3_2'
+        '/doodle/scene3_2'
       ]
     }
   },
