@@ -81,37 +81,37 @@
       <div class="mt-4 mb-5 flex w-auto justify-center">
         <ul class="flex">
           <li class="mx-6 md:mx-10">
-            <a
-              href="#"
+            <button
               v-bind:class="{
                 'nav-link-active': currentComponent == 'bio',
                 'nav-link': currentComponent != 'bio'
               }"
               @click="swapComponent('bio')"
-              ><fa class="navcon" :icon="['far', 'file-alt']"></fa>Bio</a
             >
+              <fa class="navcon" :icon="['far', 'file-alt']"></fa>Bio
+            </button>
           </li>
           <li class="mx-6 md:mx-10">
-            <a
-              href="#"
+            <button
               v-bind:class="{
                 'nav-link-active': currentComponent == 'doodle',
                 'nav-link': currentComponent != 'doodle'
               }"
               @click="swapComponent('doodle')"
-              ><fa class="navcon" :icon="['fas', 'pen']"></fa>Doodles</a
             >
+              <fa class="navcon" :icon="['fas', 'pen']"></fa>Doodles
+            </button>
           </li>
           <li class="mx-6 md:mx-10">
-            <a
-              href="#"
+            <button
               v-bind:class="{
                 'nav-link-active': currentComponent == 'photog',
                 'nav-link': currentComponent != 'photog'
               }"
               @click="swapComponent('photog')"
-              ><fa class="navcon" :icon="['fas', 'camera']"></fa>Photography</a
             >
+              <fa class="navcon" :icon="['fas', 'camera']"></fa>Photography
+            </button>
           </li>
         </ul>
       </div>
