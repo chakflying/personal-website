@@ -1,7 +1,7 @@
 <template>
   <client-only>
     <div
-      v-masonry="photogma"
+      v-masonry="'photogma'"
       transition-duration="1s"
       item-selector=".item"
       stagger="0.1s"
@@ -15,7 +15,12 @@
       >
         <picture>
           <source :srcset="item + '.webp'" type="image/webp" />
-          <img class="myphoto" :src="item + '.jpeg'" :alt="'Photo ' + index + 1" />
+          <img
+            class="myphoto"
+            :src="item + '.jpeg'"
+            :alt="'Photo ' + (index + 1)"
+            @load="imageLoaded"
+          />
         </picture>
       </div>
     </div>
@@ -42,12 +47,21 @@ export default {
         '/photog/_DSC0614',
         '/photog/_DSC0084',
         '/photog/_DSC9213'
-      ]
+      ],
+      imagesloaded: 0
     }
   },
   mounted() {
     if (typeof this.$redrawVueMasonry === 'function') {
       this.$redrawVueMasonry('photogma')
+    }
+  },
+  methods: {
+    imageLoaded() {
+      this.imagesloaded += 1
+      if (this.imagesloaded === this.photos.length) {
+        this.$redrawVueMasonry('photogma')
+      }
     }
   }
 }
@@ -60,23 +74,17 @@ export default {
 
 .item {
   z-index: 1;
-  min-height: 100px;
+  min-height: 10px;
 }
 
 .item:hover {
   z-index: 999;
-  @apply shadow-2xl;
+  transform: scale(1.15);
+  transition: transform 0.25s ease-in-out;
 }
 
 .myphoto {
   width: 100%;
-}
-
-.myphoto:hover {
-  transform: scale(1.15);
-}
-
-img {
-  transition: transform 0.25s ease-in-out;
+  @apply shadow-2xl;
 }
 </style>

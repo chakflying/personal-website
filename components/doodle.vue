@@ -1,7 +1,7 @@
 <template>
   <client-only>
     <div
-      v-masonry="doodlema"
+      v-masonry="'doodlema'"
       transition-duration="1s"
       item-selector=".item"
       stagger="0.1s"
@@ -11,11 +11,16 @@
         v-for="(item, index) in doodles"
         :key="index"
         v-masonry-tile
-        class="item w-full lg:w-1/3 p-4 lg:p-1"
+        class="item w-full lg:w-1/3 p-4 lg:p-2"
       >
         <picture>
           <source :srcset="item + '.webp'" type="image/webp" />
-          <img class="mydoodle" :src="item + '.jpeg'" :alt="'Doodle ' + index + 1" />
+          <img
+            class="mydoodle"
+            :src="item + '.jpeg'"
+            :alt="'Doodle ' + (index + 1)"
+            @load="imageLoaded"
+          />
         </picture>
       </div>
     </div>
@@ -36,12 +41,21 @@ export default {
         '/doodle/brainbird',
         '/doodle/outerworlds1',
         '/doodle/scene3_2'
-      ]
+      ],
+      imagesloaded: 0
     }
   },
   mounted() {
     if (typeof this.$redrawVueMasonry === 'function') {
       this.$redrawVueMasonry('doodlema')
+    }
+  },
+  methods: {
+    imageLoaded() {
+      this.imagesloaded += 1
+      if (this.imagesloaded === this.doodles.length) {
+        this.$redrawVueMasonry('doodlema')
+      }
     }
   }
 }
@@ -54,23 +68,17 @@ export default {
 
 .item {
   z-index: 1;
-  min-height: 100px;
+  min-height: 10px;
 }
 
 .item:hover {
   z-index: 999;
-  @apply shadow-2xl;
+  transform: scale(1.15);
+  transition: transform 0.25s ease-in-out;
 }
 
 .mydoodle {
   width: 100%;
-}
-
-.mydoodle:hover {
-  transform: scale(1.15);
-}
-
-img {
-  transition: transform 0.25s ease-in-out;
+  @apply shadow-2xl;
 }
 </style>
