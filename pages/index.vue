@@ -368,12 +368,15 @@ body {
 }
 
 #glow {
+  pointer-events: none;
 }
 
 #glowflood {
+  pointer-events: none;
 }
 
 #paint0_linear {
+  pointer-events: none;
 }
 
 .footer {
