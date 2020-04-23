@@ -31,11 +31,7 @@ export default {
   /*
    ** Plugins to load before mounting the App
    */
-  plugins: [
-    { src: '~/plugins/vue-masonry', ssr: false },
-    '~/plugins/fontawesome.js',
-    { src: '~/plugins/gsap.js', ssr: false }
-  ],
+  plugins: [{ src: '~/plugins/vue-masonry', ssr: false }, '~/plugins/fontawesome.js'],
   /*
    ** Nuxt.js dev-modules
    */
@@ -74,6 +70,32 @@ export default {
     extractCSS: true,
     analyse: true,
     transpile: ['gsap'],
-    extend(config, ctx) {}
+    loaders: {
+      file: {},
+      fontUrl: { limit: 1000 },
+      imgUrl: { limit: 1000 },
+      pugPlain: {},
+      vue: {
+        transformAssetUrls: {
+          video: 'src',
+          source: 'src',
+          object: 'src',
+          embed: 'src'
+        }
+      },
+      css: {},
+      cssModules: {
+        modules: {
+          localIdentName: '[hash:base64:5]'
+        }
+      },
+      less: {},
+      sass: {
+        indentedSyntax: true
+      },
+      scss: {},
+      stylus: {},
+      vueStyle: {}
+    }
   }
 }

@@ -3,20 +3,22 @@
     <div
       v-masonry="'doodlema'"
       transition-duration="1s"
-      item-selector=".item"
+      v-bind:item-selector="`.${$style.item}`"
       stagger="0.1s"
-      class="masonry-container w-full lg:w-4/5"
+      class="w-full lg:w-4/5"
+      :class="$style.masonrycontainer"
     >
       <div
         v-for="(item, index) in doodles"
         :key="index"
         v-masonry-tile
-        class="item w-full lg:w-1/3 p-4 lg:p-2"
+        class="w-full lg:w-1/3 p-4 lg:p-2"
+        :class="$style.item"
       >
         <picture>
           <source :srcset="item + '.webp'" type="image/webp" />
           <img
-            class="mydoodle"
+            :class="$style.mydoodle"
             :src="item + '.jpeg'"
             :alt="'Doodle ' + (index + 1)"
             @load="imageLoaded"
@@ -61,8 +63,8 @@ export default {
 }
 </script>
 
-<style lang="postcss" scoped>
-.masonry-container {
+<style lang="postcss" scoped module>
+.masonrycontainer {
   @apply flex justify-center items-center mx-auto;
 }
 
@@ -72,7 +74,7 @@ export default {
 }
 
 .item:hover {
-  z-index: 999;
+  z-index: 99;
   transform: scale(1.15);
   transition: transform 0.25s ease-in-out;
 }
