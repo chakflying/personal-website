@@ -55,7 +55,7 @@ export default {
   methods: {
     imageLoaded() {
       this.imagesloaded += 1
-      if (this.imagesloaded % 3 === 0) {
+      if (this.imagesloaded % 3 === 0 || this.imagesloaded === this.doodles.length) {
         this.$redrawVueMasonry('doodlema')
       }
     }
