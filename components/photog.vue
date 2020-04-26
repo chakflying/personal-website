@@ -12,7 +12,7 @@
         v-for="(item, index) in photos"
         :key="index"
         v-masonry-tile
-        class="w-full lg:w-1/3 p-4 lg:p-1"
+        class="w-full sm:w-1/2 lg:w-1/3 p-4 sm:p-1"
         :class="$style.item"
       >
         <picture>
@@ -76,7 +76,7 @@ export default {
 
 .item {
   z-index: 1;
-  min-height: 10px;
+  min-height: 100px;
 }
 
 .item:hover {
@@ -86,7 +86,6 @@ export default {
 }
 
 .myphoto {
-  width: 100%;
   @apply shadow-2xl;
 }
 </style>
