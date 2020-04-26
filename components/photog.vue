@@ -61,7 +61,7 @@ export default {
   methods: {
     imageLoaded() {
       this.imagesloaded += 1
-      if (this.imagesloaded === this.photos.length) {
+      if (this.imagesloaded % 3 === 0) {
         this.$redrawVueMasonry('photogma')
       }
     }
