@@ -3,8 +3,8 @@
     <div
       v-masonry="'photogma'"
       transition-duration="1s"
-      v-bind:item-selector="`.${$style.item}`"
-      stagger="0.1s"
+      :item-selector="`.${$style.item}`"
+      stagger="0.03s"
       class="w-full lg:w-4/5"
       :class="$style.masonrycontainer"
     >
@@ -76,16 +76,20 @@ export default {
 
 .item {
   z-index: 1;
-  min-height: 100px;
+  min-height: 200px;
 }
 
 .item:hover {
-  z-index: 99;
-  transform: scale(1.15);
-  transition: transform 0.25s ease-in-out;
+  z-index: 9;
 }
 
 .myphoto {
   @apply shadow-2xl;
+  transition: transform 0.1s ease-out;
+}
+
+.myphoto:hover {
+  transform: scale(1.15);
+  transition: transform 0.25s ease-out;
 }
 </style>

@@ -3,8 +3,8 @@
     <div
       v-masonry="'doodlema'"
       transition-duration="1s"
-      v-bind:item-selector="`.${$style.item}`"
-      stagger="0.1s"
+      :item-selector="`.${$style.item}`"
+      stagger="0.03s"
       class="w-full lg:w-4/5"
       :class="$style.masonrycontainer"
     >
@@ -74,12 +74,16 @@ export default {
 }
 
 .item:hover {
-  z-index: 99;
-  transform: scale(1.15);
-  transition: transform 0.25s ease-in-out;
+  z-index: 9;
 }
 
 .mydoodle {
   @apply shadow-2xl;
+  transition: transform 0.1s ease-out;
+}
+
+.mydoodle:hover {
+  transform: scale(1.15);
+  transition: transform 0.25s ease-out;
 }
 </style>
