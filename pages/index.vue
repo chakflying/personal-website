@@ -25,7 +25,7 @@
           d="M2000.5 1669L1969 1639.5V1598.5L2000.5 1569V1526.5L1969 1500.5V1463L2000.5 1433.5V1391L1969 1361.5V1320.5L2000.5 1291V1248.5L1969 1222.5V1185L2000.5 1155.5V1113L1969 1083.5V1042.5L2000.5 1013V970.5L1969 944.5V907L2000.5 877.5V835L1969 805.5V764.5L2000.5 735V692.5L1969 666.5V629L2000.5 599.5V557L1969 527.5V486.5L2000.5 457V414.5L1969 388.5V351L2000.5 321.5V279L1969 249.5V208.5L2000.5 179V136.5L1969 110.5V73L2000.5 43.5V1"
           stroke="#1F1F1F"
           stroke-width="7"
-          v-bind:filter="`url(#${this.$style.glow})`"
+          :filter="`url(#${this.$style.glow})`"
         ></path>
         <defs>
           <linearGradient
@@ -201,8 +201,6 @@ export default {
         .to(`#${this.$style.gap}`, { duration: 0.01, strokeWidth: 0 }, 'open')
         .to(`#${this.$style.right}`, { duration: 2.15, x: -1350, ease: 'power2.out' }, 'open')
         .to(`#${this.$style.left}`, { duration: 2.15, x: 1350, ease: 'power2.out' }, 'open')
-        .to(`.${this.$style.bg_noise}`, { duration: 0.01, zIndex: 1000 }, 'open')
-        .to(`#${this.$style.bgsvg}`, { duration: 0.01, zIndex: -100 }, 'open+=1.5')
     })
   },
   methods: {
@@ -266,6 +264,7 @@ export default {
   top: -1px;
   left: 0;
   overflow: hidden;
+  pointer-events: none;
 }
 
 .bg_noise {
@@ -273,7 +272,7 @@ export default {
   width: 99vw;
   height: 99vh;
   overflow: hidden;
-  z-index: 5;
+  z-index: 10;
   pointer-events: none;
   mix-blend-mode: overlay;
 }
