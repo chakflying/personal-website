@@ -131,7 +131,7 @@
         <a href="https://www.linkedin.com/in/nelsoncch/" :class="$style.social"
           ><fa class="mx-6" :icon="['fab', 'linkedin']"></fa
         ></a>
-        <a href="mailto:chan.chak@northeastern.edu" :class="$style.social"
+        <a href="mailto:me@nelc.cc" :class="$style.social"
           ><fa class="mx-6" :icon="['fas', 'inbox']"></fa
         ></a>
       </div>
