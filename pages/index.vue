@@ -200,9 +200,9 @@ export default class VueIndex extends Vue {
           'crack'
         )
         .add('open')
-        .to(`#${this.$style.gap}`, { duration: 0.01, strokeWidth: 0 }, 'open')
-        .to(`#${this.$style.right}`, { duration: 2.15, x: -1350, ease: 'power2.out' }, 'open')
-        .to(`#${this.$style.left}`, { duration: 2.15, x: 1350, ease: 'power2.out' }, 'open')
+        .to(`#${this.$style.gap}`, { duration: 0.7, strokeWidth: 0 }, 'open')
+        .to(`#${this.$style.right}`, { duration: 1.7, x: -1350, ease: 'power1.inOut' }, 'open')
+        .to(`#${this.$style.left}`, { duration: 1.7, x: 1350, ease: 'power1.inOut' }, 'open')
     })
   }
 
