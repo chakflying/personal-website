@@ -13,20 +13,20 @@
           d="M1969 1639.5L2000.5 1669H3969V1H2000.5V43.5L1969 73V110.5L2000.5 136.5V179L1969 208.5V249.5L2000.5 279V321.5L1969 351V388.5L2000.5 414.5V457L1969 486.5V527.5L2000.5 557V599.5L1969 629V666.5L2000.5 692.5V735L1969 764.5V805.5L2000.5 835V877.5L1969 907V944.5L2000.5 970.5V1013L1969 1042.5V1083.5L2000.5 1113V1155.5L1969 1185V1222.5L2000.5 1248.5V1291L1969 1320.5V1361.5L2000.5 1391V1433.5L1969 1463V1500.5L2000.5 1526.5V1569L1969 1598.5V1639.5Z"
           fill="#1F1F1F"
           stroke="none"
-        ></path>
+        />
         <path
           :id="$style.right"
           d="M1969.5 1639.5L2001 1669H1V1H2001V43.5L1969.5 73V110.5L2001 136.5V179L1969.5 208.5V249.5L2001 279V321.5L1969.5 351V388.5L2001 414.5V457L1969.5 486.5V527.5L2001 557V599.5L1969.5 629V666.5L2001 692.5V735L1969.5 764.5V805.5L2001 835V877.5L1969.5 907V944.5L2001 970.5V1013L1969.5 1042.5V1083.5L2001 1113V1155.5L1969.5 1185V1222.5L2001 1248.5V1291L1969.5 1320.5V1361.5L2001 1391V1433.5L1969.5 1463V1500.5L2001 1526.5V1569L1969.5 1598.5V1639.5Z"
           fill="#1F1F1F"
           stroke="none"
-        ></path>
+        />
         <path
           :id="$style.gap"
           d="M2000.5 1669L1969 1639.5V1598.5L2000.5 1569V1526.5L1969 1500.5V1463L2000.5 1433.5V1391L1969 1361.5V1320.5L2000.5 1291V1248.5L1969 1222.5V1185L2000.5 1155.5V1113L1969 1083.5V1042.5L2000.5 1013V970.5L1969 944.5V907L2000.5 877.5V835L1969 805.5V764.5L2000.5 735V692.5L1969 666.5V629L2000.5 599.5V557L1969 527.5V486.5L2000.5 457V414.5L1969 388.5V351L2000.5 321.5V279L1969 249.5V208.5L2000.5 179V136.5L1969 110.5V73L2000.5 43.5V1"
           stroke="#1F1F1F"
           stroke-width="7"
           :filter="`url(#${this.$style.glow})`"
-        ></path>
+        />
         <defs>
           <linearGradient
             :id="$style.paint0_linear"
@@ -53,21 +53,23 @@
               result="flood"
               flood-color="#ffffff"
               flood-opacity="0"
-            ></feFlood>
-            <feComposite in="flood" result="mask" in2="SourceGraphic" operator="in"></feComposite>
-            <feMorphology in="mask" result="dilated" operator="dilate" radius="2"></feMorphology>
-            <feGaussianBlur in="dilated" result="blurred" stdDeviation="10"></feGaussianBlur>
+            />
+            <feComposite in="flood" result="mask" in2="SourceGraphic" operator="in" />
+            <feMorphology in="mask" result="dilated" operator="dilate" radius="2" />
+            <feGaussianBlur in="dilated" result="blurred" stdDeviation="10" />
             <feMerge>
-              <feMergeNode in="blurred"></feMergeNode>
-              <feMergeNode in="SourceGraphic"></feMergeNode>
+              <feMergeNode in="blurred" />
+              <feMergeNode in="SourceGraphic" />
             </feMerge>
           </filter>
         </defs>
       </svg>
     </div>
-    <div :class="$style.bg_noise"></div>
+    <div :class="$style.bg_noise" />
     <div :class="$style.mainheader">
-      <div class="title">Hi, I'm Nelson!</div>
+      <div class="title">
+        Hi, I'm Nelson!
+      </div>
       <div class="flex justify-center mt-2">
         <picture>
           <source srcset="/webicon1.webp" type="image/webp" />
@@ -88,7 +90,7 @@
               }"
               @click="swapComponent('bio')"
             >
-              <fa :class="$style.navcon" :icon="['far', 'file-alt']"></fa>Bio
+              <fa :class="$style.navcon" :icon="['far', 'file-alt']" />Bio
             </button>
           </li>
           <li class="mx-6 md:mx-10">
@@ -99,7 +101,7 @@
               }"
               @click="swapComponent('doodle')"
             >
-              <fa :class="$style.navcon" :icon="['fas', 'pen']"></fa>Doodles
+              <fa :class="$style.navcon" :icon="['fas', 'pen']" />Doodles
             </button>
           </li>
           <li class="mx-6 md:mx-10">
@@ -110,52 +112,52 @@
               }"
               @click="swapComponent('photog')"
             >
-              <fa :class="$style.navcon" :icon="['fas', 'camera']"></fa>Photography
+              <fa :class="$style.navcon" :icon="['fas', 'camera']" />Photography
             </button>
           </li>
         </ul>
       </div>
     </div>
     <div :id="$style.toReplace">
-      <div :is="currentComponent"></div>
+      <div :is="currentComponent" />
     </div>
     <div :class="$style.footer">
       <hr :class="$style.divider" />
       <div class="mt-3 mb-8 flex w-auto justify-center text-2xl">
-        <a href="https://gitlab.com/chakflying/" :class="$style.social"
-          ><fa class="mx-6" :icon="['fab', 'gitlab']"></fa
-        ></a>
-        <a href="https://github.com/chakflying/" :class="$style.social"
-          ><fa class="mx-6" :icon="['fab', 'github']"></fa
-        ></a>
-        <a href="https://www.linkedin.com/in/nelsoncch/" :class="$style.social"
-          ><fa class="mx-6" :icon="['fab', 'linkedin']"></fa
-        ></a>
-        <a href="mailto:me@nelc.cc" :class="$style.social"
-          ><fa class="mx-6" :icon="['fas', 'inbox']"></fa
-        ></a>
+        <a href="https://gitlab.com/chakflying/" :class="$style.social">
+          <fa class="mx-6" :icon="['fab', 'gitlab']" />
+        </a>
+        <a href="https://github.com/chakflying/" :class="$style.social">
+          <fa class="mx-6" :icon="['fab', 'github']" />
+        </a>
+        <a href="https://www.linkedin.com/in/nelsoncch/" :class="$style.social">
+          <fa class="mx-6" :icon="['fab', 'linkedin']" />
+        </a>
+        <a href="mailto:me@nelc.cc" :class="$style.social">
+          <fa class="mx-6" :icon="['fas', 'inbox']" />
+        </a>
       </div>
     </div>
   </div>
 </template>
 
-<script>
-import { gsap } from 'gsap'
+<script lang="ts">
+import Vue from 'vue'
+import Component from 'vue-class-component'
+import gsap from 'gsap'
 import photog from '~/components/photog.vue'
 import doodle from '~/components/doodle.vue'
 import bio from '~/components/bio.vue'
 
-export default {
+@Component({
   components: {
     photog,
     doodle,
     bio
-  },
-  data() {
-    return {
-      currentComponent: 'bio'
-    }
-  },
+  }
+})
+export default class VueIndex extends Vue {
+  currentComponent = 'bio'
 
   mounted() {
     this.$nextTick(function() {
@@ -163,7 +165,7 @@ export default {
       tl.set(`#${this.$style.left}`, { x: -80 })
         .set(`#${this.$style.right}`, { x: 80 })
         .set(`#${this.$style.gap}`, {
-          strokeDasharray: [0, 105],
+          strokeDasharray: '0 105',
           strokeDashoffset: 52,
           stroke: `url(#${this.$style.paint0_linear})`
         })
@@ -174,7 +176,7 @@ export default {
           `#${this.$style.gap}`,
           {
             duration: 1.5,
-            strokeDasharray: [100, 0],
+            strokeDasharray: '100 0',
             strokeDashoffset: 52,
             strokeWidth: 8,
             stroke: 'white',
@@ -202,12 +204,12 @@ export default {
         .to(`#${this.$style.right}`, { duration: 2.15, x: -1350, ease: 'power2.out' }, 'open')
         .to(`#${this.$style.left}`, { duration: 2.15, x: 1350, ease: 'power2.out' }, 'open')
     })
-  },
-  methods: {
-    swapComponent(comp) {
-      this.currentComponent = comp
-    }
-  },
+  }
+
+  swapComponent(comp: string): void {
+    this.currentComponent = comp
+  }
+
   head() {
     return {
       title: 'Nelson Chan'

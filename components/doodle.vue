@@ -29,35 +29,33 @@
   </client-only>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue'
+import Component from 'vue-class-component'
 import ClientOnly from 'vue-client-only'
-export default {
-  components: {
-    ClientOnly
-  },
-  data() {
-    return {
-      doodles: [
-        '/doodle/louvre',
-        '/doodle/sometroop',
-        '/doodle/brainbird',
-        '/doodle/outerworlds1',
-        '/doodle/scene3_2'
-      ],
-      imagesloaded: 0
-    }
-  },
+
+@Component({ components: { ClientOnly } })
+export default class VueDoodle extends Vue {
+  doodles = [
+    '/doodle/louvre',
+    '/doodle/sometroop',
+    '/doodle/brainbird',
+    '/doodle/outerworlds1',
+    '/doodle/scene3_2'
+  ]
+
+  imagesloaded = 0
+
   mounted() {
     if (typeof this.$redrawVueMasonry === 'function') {
       this.$redrawVueMasonry('doodlema')
     }
-  },
-  methods: {
-    imageLoaded() {
-      this.imagesloaded += 1
-      if (this.imagesloaded % 3 === 0 || this.imagesloaded === this.doodles.length) {
-        this.$redrawVueMasonry('doodlema')
-      }
+  }
+
+  imageLoaded() {
+    this.imagesloaded += 1
+    if (this.imagesloaded % 3 === 0 || this.imagesloaded === this.doodles.length) {
+      this.$redrawVueMasonry('doodlema')
     }
   }
 }

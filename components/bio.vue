@@ -33,6 +33,11 @@
   </div>
 </template>
 
+<script lang="ts">
+import Vue from 'vue'
+export default Vue.extend({})
+</script>
+
 <style lang="postcss" scoped module>
 .biolist {
   @apply text-gray-700 list-disc;

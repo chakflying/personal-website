@@ -29,41 +29,39 @@
   </client-only>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue'
+import Component from 'vue-class-component'
 import ClientOnly from 'vue-client-only'
-export default {
-  components: {
-    ClientOnly
-  },
-  data() {
-    return {
-      photos: [
-        '/photog/_DSC0033',
-        '/photog/_DSC0052',
-        '/photog/_DSC1079',
-        '/photog/_DSC0173',
-        '/photog/_DSC9292',
-        '/photog/_DSC9597',
-        '/photog/_DSC0425',
-        '/photog/_DSC0999',
-        '/photog/_DSC0614',
-        '/photog/_DSC0084',
-        '/photog/_DSC9213'
-      ],
-      imagesloaded: 0
-    }
-  },
+
+@Component({ components: { ClientOnly } })
+export default class VuePhotog extends Vue {
+  photos = [
+    '/photog/_DSC0033',
+    '/photog/_DSC0052',
+    '/photog/_DSC1079',
+    '/photog/_DSC0173',
+    '/photog/_DSC9292',
+    '/photog/_DSC9597',
+    '/photog/_DSC0425',
+    '/photog/_DSC0999',
+    '/photog/_DSC0614',
+    '/photog/_DSC0084',
+    '/photog/_DSC9213'
+  ]
+
+  imagesloaded = 0
+
   mounted() {
     if (typeof this.$redrawVueMasonry === 'function') {
       this.$redrawVueMasonry('photogma')
     }
-  },
-  methods: {
-    imageLoaded() {
-      this.imagesloaded += 1
-      if (this.imagesloaded % 3 === 0 || this.imagesloaded === this.photos.length) {
-        this.$redrawVueMasonry('photogma')
-      }
+  }
+
+  imageLoaded() {
+    this.imagesloaded += 1
+    if (this.imagesloaded % 3 === 0 || this.imagesloaded === this.photos.length) {
+      this.$redrawVueMasonry('photogma')
     }
   }
 }
