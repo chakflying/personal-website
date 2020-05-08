@@ -47,6 +47,9 @@ export default class VueDoodle extends Vue {
   imagesloaded = 0
 
   mounted() {
+    if ('ontouchstart' in document.documentElement) {
+      document.documentElement.classList.add(this.$style.touch)
+    }
     if (typeof this.$redrawVueMasonry === 'function') {
       this.$redrawVueMasonry('doodlema')
     }
@@ -83,5 +86,9 @@ export default class VueDoodle extends Vue {
 .mydoodle:hover {
   transform: scale(1.15);
   transition: transform 0.25s ease-out;
+}
+
+.touch .mydoodle:hover {
+  transform: none !important;
 }
 </style>
