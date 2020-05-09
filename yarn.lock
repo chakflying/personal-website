@@ -4694,13 +4694,6 @@ ignore@^5.1.1, ignore@^5.1.4:
   resolved "https://registry.yarnpkg.com/ignore/-/ignore-5.1.4.tgz#84b7b3dbe64552b6ef0eca99f6743dbec6d97adf"
   integrity sha512-MzbUSahkTW1u7JpKKjY7LCARd1fU5W2rLdxlM4kdkayuCwZImjkpluF9CM1aLewYJguPDqewLam18Y6AU69A8A==
 
-imagesloaded@4.1.4:
-  version "4.1.4"
-  resolved "https://registry.yarnpkg.com/imagesloaded/-/imagesloaded-4.1.4.tgz#1376efcd162bb768c34c3727ac89cc04051f3cc7"
-  integrity sha512-ltiBVcYpc/TYTF5nolkMNsnREHW+ICvfQ3Yla2Sgr71YFwQ86bDwV9hgpFhFtrGPuwEx5+LqOHIrdXBdoWwwsA==
-  dependencies:
-    ev-emitter "^1.0.0"
-
 import-cwd@^2.0.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/import-cwd/-/import-cwd-2.1.0.tgz#aa6cf36e722761285cb371ec6519f53e2435b0a9"
@@ -8737,12 +8730,10 @@ vue-loader@^15.9.1:
     vue-hot-reload-api "^2.3.0"
     vue-style-loader "^4.1.0"
 
-vue-masonry@^0.11.8:
-  version "0.11.8"
-  resolved "https://registry.yarnpkg.com/vue-masonry/-/vue-masonry-0.11.8.tgz#fc2dd458d13b557eebc68d70506af76aa6d1428e"
-  integrity sha512-O+T+3zUghbKpjc+5aubXr8Kg1h9P334+Or9euYyXsQYa3mtScUqZFI6A16BijR9v4hYdtKksuPzU0mQplUvhDA==
+"vue-masonry@https://github.com/chakflying/vue-masonry.git":
+  version "1.11.8"
+  resolved "https://github.com/chakflying/vue-masonry.git#33410d3e887f73b04e3ddb30bd5c62e08645b3d1"
   dependencies:
-    imagesloaded "4.1.4"
     masonry-layout "^4.2.2"
     vue "^2.0.0"
 
