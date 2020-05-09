@@ -83,8 +83,8 @@ export default {
       push: true,
       pushAssets: (_req, _res, publicPath, preloadFiles) =>
         preloadFiles
-          .filter(f => f.asType === 'script')
-          .map(f => `<${publicPath}${f.file}>; rel=preload; as=${f.asType}`)
+          .filter((f) => f.asType === 'script')
+          .map((f) => `<${publicPath}${f.file}>; rel=preload; as=${f.asType}`)
     },
     csp: true,
     compressor: false

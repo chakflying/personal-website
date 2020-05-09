@@ -19,6 +19,7 @@ module.exports = {
   // add your custom rules here
   rules: {
     'space-before-function-paren': [0, 'never'],
+    'arrow-parens': ["error", "always"],
     "vue/html-self-closing": ["error", {
       "html": {
         "void": "any",
