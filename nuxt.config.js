@@ -1,3 +1,5 @@
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
+
 export default {
   mode: 'universal',
   /*
@@ -76,6 +78,18 @@ export default {
     }
   },
 
+  render: {
+    http2: {
+      push: true,
+      pushAssets: (_req, _res, publicPath, preloadFiles) =>
+        preloadFiles
+          .filter(f => f.asType === 'script')
+          .map(f => `<${publicPath}${f.file}>; rel=preload; as=${f.asType}`)
+    },
+    csp: true,
+    compressor: false
+  },
+
   /*
    ** Build configuration
    */
@@ -87,6 +101,7 @@ export default {
     extractCSS: true,
     analyse: true,
     transpile: ['gsap'],
+    plugins: [new BundleAnalyzerPlugin({ analyzerMode: 'static' })],
     loaders: {
       file: {},
       fontUrl: { limit: 1000 },
