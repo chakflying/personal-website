@@ -101,7 +101,7 @@ export default {
     extractCSS: true,
     analyse: true,
     transpile: ['gsap'],
-    plugins: [new BundleAnalyzerPlugin({ analyzerMode: 'static' })],
+    plugins: [new BundleAnalyzerPlugin({ analyzerMode: 'disabled' })],
     loaders: {
       file: {},
       fontUrl: { limit: 1000 },
