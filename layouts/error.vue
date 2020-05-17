@@ -2,8 +2,8 @@
   <div :class="$style.container">
     <svg
       width="730"
-      height="508"
-      viewBox="0 0 730 508"
+      height="475"
+      viewBox="0 0 730 475"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       :class="$style.error_svg"
@@ -38,9 +38,16 @@
         stroke="black"
         stroke-width="2"
       />
-      <path d="M105.092 410.752L78.9079 506.248" stroke="black" stroke-width="5" />
-      <path d="M117.588 411.584L112.412 482.416" stroke="black" stroke-width="6" />
-      <path d="M134 413V464" stroke="black" stroke-width="7" />
+      <path
+        d="M105 411V440C105 440 105 450.5 105 461.5C105 472.5 151.5 472.5 157 472.5C162.5 472.5 172.5 472.5 172.5 465C172.5 455.5 163.216 455.5 159 455.5C153.5 455.5 145 455.5 140.5 455.5V411"
+        stroke="black"
+        stroke-width="5"
+      />
+      <path
+        d="M173.5 465.5C176 465.5 184 465.5 184 457C184 448 174.716 448 170.5 448C165 448 156.5 448 152 448V404"
+        stroke="black"
+        stroke-width="3"
+      />
       <path
         d="M174 256C174 227 200 186 248 186C296 186 321 225 321 256"
         stroke="black"
