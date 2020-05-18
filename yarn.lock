@@ -8742,8 +8742,8 @@ vue-loader@^15.9.1:
     vue-style-loader "^4.1.0"
 
 "vue-masonry@https://github.com/chakflying/vue-masonry.git":
-  version "1.11.8"
-  resolved "https://github.com/chakflying/vue-masonry.git#92d11e4e8977d2caee0a82803bf13bae9b7574bb"
+  version "1.11.9"
+  resolved "https://github.com/chakflying/vue-masonry.git#3535e9666f3d95bb08a3f5b50607b9a55b37b5b6"
   dependencies:
     masonry-layout "^4.2.2"
     vue "^2.0.0"
