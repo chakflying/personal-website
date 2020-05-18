@@ -128,6 +128,24 @@ export default {
       scss: {},
       stylus: {},
       vueStyle: {}
+    },
+    babel: {
+      // envName: server, client, modern
+      presets({ envName }) {
+        const envTargets = {
+          client: { browsers: ['> 1%, not dead'] },
+          server: { node: 'current' }
+        }
+        return [
+          [
+            '@nuxt/babel-preset-app',
+            {
+              corejs: { version: 3 },
+              targets: envTargets[envName]
+            }
+          ]
+        ]
+      }
     }
   }
 }
