@@ -122,21 +122,21 @@
       <div :is="currentComponent" />
     </div>
     <div :class="$style.footer">
-      <hr :class="$style.divider" />
-      <div class="mt-3 mb-8 flex w-auto justify-center text-2xl">
+      <div class="mt-3 mx-0 md:mx-3 flex w-auto justify-center text-2xl">
         <a href="https://gitlab.com/chakflying/" :class="$style.social">
-          <fa class="mx-6" :icon="['fab', 'gitlab']" />
+          <fa class="mx-8" :icon="['fab', 'gitlab']" />
         </a>
         <a href="https://github.com/chakflying/" :class="$style.social">
-          <fa class="mx-6" :icon="['fab', 'github']" />
+          <fa class="mx-8" :icon="['fab', 'github']" />
         </a>
         <a href="https://www.linkedin.com/in/nelsoncch/" :class="$style.social">
-          <fa class="mx-6" :icon="['fab', 'linkedin']" />
+          <fa class="mx-8" :icon="['fab', 'linkedin']" />
         </a>
         <a href="mailto:me@nelc.cc" :class="$style.social">
-          <fa class="mx-6" :icon="['fas', 'inbox']" />
+          <fa class="mx-8" :icon="['fas', 'inbox']" />
         </a>
       </div>
+      <hr :class="$style.bottom_divider" />
     </div>
   </div>
 </template>
@@ -316,6 +316,11 @@ export default class VueIndex extends Vue {
 .divider {
   border-top: 2px solid;
   @apply border-gray-400 mt-5;
+}
+
+.bottom_divider {
+  border-top: 2px solid;
+  @apply border-gray-400 mt-4 mb-10;
 }
 
 .title {
