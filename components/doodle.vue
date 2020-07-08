@@ -40,7 +40,7 @@ export default class VueDoodle extends Vue {
     '/doodle/louvre',
     '/doodle/sometroop',
     '/doodle/brainbird',
-    '/doodle/outerworlds1',
+    '/doodle/looker1',
     '/doodle/scene3_2'
   ]
 
