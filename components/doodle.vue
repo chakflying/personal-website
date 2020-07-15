@@ -40,8 +40,8 @@ export default class VueDoodle extends Vue {
     '/doodle/louvre',
     '/doodle/sometroop',
     '/doodle/brainbird',
-    '/doodle/looker1',
-    '/doodle/scene3_2'
+    '/doodle/greg01',
+    '/doodle/looker1'
   ]
 
   imagesloaded = 0
