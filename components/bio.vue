@@ -1,5 +1,5 @@
 <template>
-  <div class="mx-auto w-4/5 lg:w-1/2 p-2 mt-2 md:mt-6">
+  <div class="mx-auto w-4/5 md:w-1/2 lg:w-1/3 p-2 mt-2 md:mt-6">
     <ul class="lg:ml-10" :class="$style.biolist">
       <li>
         I live in Hong Kong, the city I will always love. &nbsp;<img
@@ -18,15 +18,15 @@
         full of history and culture, and I will definitely miss the freezing weather.
       </li>
       <li>
-        I worked in <a href="https://keep.edu.hk">keep.edu.hk</a> as an intern involving web
-        development.
+        I am currently working in <a href="https://aecom.com/hk/">AECOM</a> as a programmer
+        involving web development and GIS applications.
       </li>
       <li>
         I love movies and the art of storytelling. We only have one lifetime, but through movies we
         get to experience numerous others.
       </li>
       <li>
-        Photography is my best buddy during my travels. Capturing genuine moments as I experience
+        Photography is my best friend during my travels. Capturing genuine moments as I experience
         them gives me great satisfaction.
       </li>
     </ul>
