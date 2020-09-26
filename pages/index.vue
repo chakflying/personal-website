@@ -122,18 +122,18 @@
       <div :is="currentComponent" />
     </div>
     <div :class="$style.footer">
-      <div class="mt-3 mx-0 md:mx-3 flex w-auto justify-center text-2xl">
+      <div class="mt-3 mx-2 md:mx-8 flex w-auto justify-center text-2xl">
         <a href="https://gitlab.com/chakflying/" :class="$style.social">
-          <fa class="mx-8" :icon="['fab', 'gitlab']" />
+          <fa class="mx-8 lg:mx-10" :icon="['fab', 'gitlab']" />
         </a>
         <a href="https://github.com/chakflying/" :class="$style.social">
-          <fa class="mx-8" :icon="['fab', 'github']" />
+          <fa class="mx-8 lg:mx-10" :icon="['fab', 'github']" />
         </a>
         <a href="https://www.linkedin.com/in/nelsoncch/" :class="$style.social">
-          <fa class="mx-8" :icon="['fab', 'linkedin']" />
+          <fa class="mx-8 lg:mx-10" :icon="['fab', 'linkedin']" />
         </a>
         <a href="mailto:me@nelc.cc" :class="$style.social">
-          <fa class="mx-8" :icon="['fas', 'inbox']" />
+          <fa class="mx-8 lg:mx-10" :icon="['fas', 'inbox']" />
         </a>
       </div>
       <hr :class="$style.bottom_divider" />
@@ -248,7 +248,7 @@ export default class VueIndex extends Vue {
 }
 
 #toReplace {
-  min-height: 55vh;
+  min-height: 45vh;
 }
 
 .bg {

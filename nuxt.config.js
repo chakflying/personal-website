@@ -1,7 +1,6 @@
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin
 
 export default {
-  mode: 'universal',
   /*
    ** Headers of the page
    */
